@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Vehículo</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Agregar Nuevo Vehículo</h2>
+        <form action="/agregar" method="POST">
+            <label>Placa:<input type="text" name="placa" required></label>
+            <label>Marca:<input type="text" name="marca" required></label>
+            <label>Modelo:<input type="text" name="modelo" required></label>
+            <label>Tipo:<input type="text" name="tipo" required></label>
+            <label>Cilindros:<input type="number" name="cilindros" required></label>
+            <br><br>
+            <button type="submit">Guardar</button>
+        </form>
+        <br>
+        <a href="/">⬅️ Volver al listado</a>
+    </div>
+</body>
+</html>

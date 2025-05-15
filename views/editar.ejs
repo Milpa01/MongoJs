@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Vehículo</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Editar Modelo</h2>
+        <form action="/editar/<%= auto._id %>" method="POST">
+            <p>Placa: <strong><%= auto.Placa %></strong></p>
+            <label>Modelo:
+                <input type="text" name="modelo" value="<%= auto.Modelo %>" required>
+            </label>
+            <br><br>
+            <button type="submit">Guardar Cambios</button>
+        </form>
+        <br>
+        <a href="/">⬅️ Volver al listado</a>
+    </div>
+</body>
+</html>

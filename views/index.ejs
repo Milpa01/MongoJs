@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Concesionaria</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vehículos Registrados</h1>
+        <a href="/agregar">➕ Agregar Vehículo</a>
+        <ul>
+            <% autos.forEach(auto => { %>
+                <li>
+                    <div>
+                        <strong><%= auto.Placa %></strong> - 
+                        <%= auto.Marca %> <%= auto.Modelo %> 
+                        (<%= auto.Tipo %>, <%= auto.Cilindros %> cilindros)
+                    </div>
+                    <div>
+                        <a href="/editar/<%= auto._id %>">✏️ Editar</a>
+                        <form class="inline-form" action="/eliminar/<%= auto._id %>" method="POST">
+                            <button type="submit">🗑️</button>
+                        </form>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>
